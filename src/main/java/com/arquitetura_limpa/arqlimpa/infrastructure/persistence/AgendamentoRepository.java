@@ -1,14 +1,12 @@
 package com.arquitetura_limpa.arqlimpa.infrastructure.persistence;
 
-import com.arquitetura_limpa.arqlimpa.core.entities.Agendamento;
-import com.arquitetura_limpa.arqlimpa.core.enums.StatusAgendamento;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDateTime;
 
-public interface AgendamentoRepository extends JpaRepository<Agendamento, Long> {
+public interface AgendamentoRepository extends JpaRepository<AgendamentoEntity, Long> {
 
     @Query("""  
             SELECT CASE WHEN COUNT(a) > 0 THEN true ELSE false END
