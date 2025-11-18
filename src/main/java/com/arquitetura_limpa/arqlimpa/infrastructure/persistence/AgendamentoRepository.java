@@ -8,7 +8,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDateTime;
 
-public interface AgendamentoReposito extends JpaRepository<Agendamento, Long> {
+public interface AgendamentoRepository extends JpaRepository<Agendamento, Long> {
 
     @Query("""  
             SELECT CASE WHEN COUNT(a) > 0 THEN true ELSE false END
