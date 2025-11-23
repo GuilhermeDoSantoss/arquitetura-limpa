@@ -20,7 +20,7 @@ public class AgendamentoCreateMapper {
         );
     }
 
-    Agendamento toEntity(AgendamentoCreateRequest agendamentoCreateRequest){
+    public Agendamento toEntity(AgendamentoCreateRequest agendamentoCreateRequest){
         return new Agendamento(
                 null,
                 agendamentoCreateRequest.titulo(),

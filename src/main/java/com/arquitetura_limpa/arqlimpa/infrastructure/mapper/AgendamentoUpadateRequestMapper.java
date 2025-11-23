@@ -20,7 +20,7 @@ public class AgendamentoUpadateRequestMapper {
         );
     }
 
-    public Agendamento merge(Agendamento agendamentoExistente, AgendamentoUpdateRequest req){
+    public Agendamento merge(Agendamento agendamentoExistente){
         return new Agendamento(
                 agendamentoExistente.id(),
                 req.titulo() != null ? req.titulo() : agendamentoExistente.titulo(),

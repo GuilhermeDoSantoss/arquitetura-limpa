@@ -73,4 +73,6 @@ public class AgendamentoRepositoryGateway implements AgendamentoGateway {
             throw new IllegalArgumentException("Conflito de agenda");
         }
     }
+
+
 }
